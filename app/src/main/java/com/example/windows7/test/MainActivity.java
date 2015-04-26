@@ -24,6 +24,7 @@ import java.util.Random;
 public class MainActivity extends ActionBarActivity {
     public static final Bus BUS = new Bus();
     private static final String TAG = MainActivity.class.getCanonicalName();
+
     private static Handler handler;
 
     private ProgressBar progressBar;
@@ -110,7 +111,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        //  handler = null;
-        //  BUS.unregister(this);
+          handler = null;
+          BUS.unregister(this);
     }
 }
